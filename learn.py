@@ -1,11 +1,12 @@
 from agent import SacAgent
 import gym
+import pybullet_envs
 import argparse
 import csv
 
 
 def learn(device=0, environment=0, log=1):
-    env = gym.make(env_list[environment] + '-v2')
+    env = gym.make(env_list[environment])
     log_dir = 'saves/' + str(environment+1) + '/log' + str(log) + '.csv'
     with open(log_dir, "w", newline='') as csvfile:
         writer = csv.writer(csvfile)
@@ -38,7 +39,7 @@ def learn(device=0, environment=0, log=1):
 
 
 def test(environment, agent):
-    env = gym.make(env_list[environment] + '-v2')
+    env = gym.make(env_list[environment])
     state = env.reset()
     total_reward = 0
     while 1:
@@ -52,7 +53,7 @@ def test(environment, agent):
 
 
 if __name__ == '__main__':
-    env_list = ['Walker2d', 'HalfCheetah', 'Ant', 'Humanoid']
+    env_list = ['Walker2d-v2', 'HalfCheetah-v2', 'Ant-v2', 'Humanoid-v2', 'AntBulletEnv-v0', 'HumanoidBulletEnv-v0']
     parser = argparse.ArgumentParser()
     parser.add_argument('-g', '--gpu', type=int, default=0)
     parser.add_argument('-e', '--env', type=int, default=0)

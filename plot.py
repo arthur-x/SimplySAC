@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 
-def plot_curve(env, label):
+def plot_curve(env):
     min_l = 2001
     ret_list = []
     for s in range(5):
@@ -22,9 +22,9 @@ def plot_curve(env, label):
     mini = np.min(data, axis=0)
     maxi = np.max(data, axis=0)
     stamps = np.array([i * 1e-3 for i in range(min_l)])
-    plt.plot(stamps, mean, label=label, lw=1.0)
+    plt.plot(stamps, mean, label='SAC', lw=1.0)
     plt.fill_between(stamps, mini, maxi, alpha=0.2)
-    plt.title(env_list[env] + '-v2')
+    plt.title(env_list[env])
     plt.xlabel('number of environment steps (x $\mathregular{10^6}$)')
     plt.ylabel('return')
     plt.xlim(0, 2)
@@ -33,7 +33,7 @@ def plot_curve(env, label):
 
 
 if __name__ == '__main__':
-    env_list = ['Walker2d', 'HalfCheetah', 'Ant', 'Humanoid']
+    env_list = ['Walker2d-v2', 'HalfCheetah-v2', 'Ant-v2', 'Humanoid-v2', 'AntBulletEnv-v0', 'HumanoidBulletEnv-v0']
     mpl.style.use('seaborn')
-    for env in range(4):
-        plot_curve(env, 'SAC')
+    for env in range(6):
+        plot_curve(env)

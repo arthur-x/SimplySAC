@@ -18,7 +18,7 @@ The Q-value in the actor's loss averages from two critics.
 That's it! All other things follow the original paper and pseudo code.
 </li>
 
-## Mujoco benchmarks:
+## MuJoCo benchmarks:
 
 ![walker](./figures/walker2d.png)
 
@@ -37,9 +37,15 @@ One evaluation episode every 1e3 steps.
 </li>
 <br>
 
-To reproduce the results, simply run:
+To execute a single run:
 ```
-sh exp.sh
+python learn.py -g [gpu_id] -e [env_id] -l [seed_id]
 ```
-Assuming 4 GPU cards, this runs 5 seeds for one environment per card.
 
+## PyBullet benchmarks:
+
+![ant_b](./figures/ant_bullet.png)
+
+![humanoid_b](./figures/humanoid_bullet.png)
+
+Note that the PyBullet versions of the locomotion environments are harder than the MuJoCo versions.
