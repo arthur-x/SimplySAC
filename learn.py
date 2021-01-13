@@ -53,7 +53,8 @@ def test(environment, agent):
 
 
 if __name__ == '__main__':
-    env_list = ['Walker2d-v2', 'HalfCheetah-v2', 'Ant-v2', 'Humanoid-v2', 'AntBulletEnv-v0', 'HumanoidBulletEnv-v0']
+    env_list = ['Walker2d-v2', 'HalfCheetah-v2', 'Ant-v2', 'Humanoid-v2',
+                'Walker2DBulletEnv-v0', 'HalfCheetahBulletEnv-v0', 'AntBulletEnv-v0', 'HumanoidBulletEnv-v0']
     parser = argparse.ArgumentParser()
     parser.add_argument('-g', '--gpu', type=int, default=0)
     parser.add_argument('-e', '--env', type=int, default=0)
