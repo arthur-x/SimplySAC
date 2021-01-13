@@ -1,6 +1,6 @@
 # SimplySAC: A Minimal Soft-Actor-Critic PyTorch Implementation
 
-SimplySAC replicates SAC with minimum (~200) lines of code in clean, readable PyTorch style, while trying to use as little additional tricks and hyper-parameters as possible.
+SimplySAC replicates SAC with minimum (~200) lines of code in clean, readable PyTorch style, while trying to use as few additional tricks and hyper-parameters as possible.
 
 ## Implementation details:
 <li>
