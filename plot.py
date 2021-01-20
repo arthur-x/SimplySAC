@@ -33,8 +33,9 @@ def plot_curve(env):
 
 
 if __name__ == '__main__':
-    env_list = ['Walker2d-v2', 'HalfCheetah-v2', 'Ant-v2', 'Humanoid-v2',
-                'Walker2DBulletEnv-v0', 'HalfCheetahBulletEnv-v0', 'AntBulletEnv-v0', 'HumanoidBulletEnv-v0']
+    env_list = ['Hopper-v2', 'Walker2d-v2', 'HalfCheetah-v2', 'Ant-v2', 'Humanoid-v2',
+                'HopperBulletEnv-v0', 'Walker2DBulletEnv-v0', 'HalfCheetahBulletEnv-v0',
+                'AntBulletEnv-v0', 'HumanoidBulletEnv-v0']
     mpl.style.use('seaborn')
-    for env in range(8):
+    for env in range(10):
         plot_curve(env)

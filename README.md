@@ -17,6 +17,8 @@ That's it! All other things follow the original paper and pseudo code.
 
 ## MuJoCo benchmarks:
 
+![hopper](./figures/hopper.png)
+
 ![walker](./figures/walker2d.png)
 
 ![cheetah](./figures/halfcheetah.png)
@@ -40,6 +42,8 @@ python learn.py -g [gpu_id] -e [env_id] -l [seed_id]
 ```
 
 ## PyBullet benchmarks:
+
+![hopper_b](./figures/hopper_bullet.png)
 
 ![walker_b](./figures/walker2d_bullet.png)
 
