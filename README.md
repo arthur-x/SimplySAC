@@ -9,6 +9,8 @@ SimplySAC replicates SAC with minimum (~200) lines of code in clean, readable Py
 
 That's it! All other things follow the original paper and pseudo code.
 
+Also check out [SimplyPPO](https://github.com/arthur-x/SimplyPPO), a minimal Proximal-Policy-Optimization PyTorch implementation.
+
 ## MuJoCo benchmarks:
 
 ![hopper](./figures/hopper.png)
@@ -28,7 +30,7 @@ Same as the figures in the original paper, these figures are produced with:
 
 To execute a single run:
 ```
-python learn.py -g [gpu_id] -e [env_id] -l [seed_id]
+python learn.py -g [gpu_id] -e [env_id] -l [log_id]
 ```
 
 ## PyBullet benchmarks:
